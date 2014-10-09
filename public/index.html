@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Docker Event Stream</title>
+    <meta charset="utf-8" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <script type='text/javascript'>
+      $(document).ready(function() {
+        var source = new EventSource('/events');
+
+        source.addEventListener('message', function(e) {
+          var data = $.parseJSON(e.data)
+
+          var line = $('<div>');
+          line.append(new Date(data.time * 1000));
+          line.append(' ');
+          line.append(data.status);
+          line.append(' ');
+          line.append(data.id.substring(0, 12));
+          line.append(' ');
+          line.append(data.from);
+
+          $('body').append(line);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>
