@@ -1,15 +1,22 @@
 html, body {
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
 }
 
-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+body {
+  padding: 10px;
+}
+
+h1 {
+  margin: 0 auto 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
 }
 
 code {
   font-size: 16px;
   font-family: Consolas, monospace;
+  display: block;
+  margin-bottom: 15px;
 }
