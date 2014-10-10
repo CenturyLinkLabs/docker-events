@@ -4,7 +4,7 @@ require 'docker'
 set server: 'thin'
 set :bind, '0.0.0.0'
 
-Docker.options = { read_timeout: 5 }
+Docker.options = { read_timeout: 300 }
 
 get '/' do
   File.read(File.join('public', 'index.html'))
