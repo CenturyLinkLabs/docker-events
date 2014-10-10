@@ -14,6 +14,7 @@ inside the container.
       -v /var/run/docker.sock:/var/run/docker.sock \
       centurylink/docker-events
 
-It's also import to specify a port mapping so that the web application can be
+It's also important to specify a port mapping so that the web application can be
 accessed from outside the container. The web server running in the container
-listens on port 4567.
+listens on port 4567. You can use either the `-p` flag to configure a specific
+port mapping or the `-P` flag to have Docker assign a port dynamically.
