@@ -2,6 +2,7 @@
   <head>
     <title>Docker Event Stream</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
@@ -12,7 +13,7 @@
         source.addEventListener('message', function(e) {
           var data = $.parseJSON(e.data)
 
-          var line = $('<div>');
+          var line = $('<code>');
           line.append(new Date(data.time * 1000));
           line.append(' ');
           line.append(data.status);
@@ -21,12 +22,14 @@
           line.append(' ');
           line.append(data.from);
 
-          $('body').append(line);
+          $('body main').append(line);
         });
       });
     </script>
   </head>
-
   <body>
+    <main>
+
+    </main>
   </body>
 </html>
