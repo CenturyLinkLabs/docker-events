@@ -2,6 +2,10 @@
 
 Containerized web application for monitoring the Docker event stream.
 
+## NOTE
+
+This repo is no longer being maintained. Users are welcome to fork it, but we make no warranty of its functionality.
+
 ## Usage
 
 Since the application needs to interact with the Docker API in order to read
